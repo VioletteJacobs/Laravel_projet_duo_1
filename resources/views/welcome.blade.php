@@ -18,7 +18,7 @@
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img">
-          <img src="assets/img/hero-img.png" class="img-fluid" alt="">
+          <img src="img/hero-img.png'" class="img-fluid" alt="">
         </div>
       </div>
     </div>
@@ -35,6 +35,8 @@
           <div class="col-lg-6">
             <h2>Eum ipsam laborum deleniti velitena</h2>
             <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen jonee trave</h3>
+            {{-- rajouter une image --}}
+            <img class="img-fluid w-25" src="../img/mer.jpeg" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
@@ -53,7 +55,6 @@
             </p>
           </div>
         </div>
-
       </div>
     </section><!-- End About Section -->
 @endsection

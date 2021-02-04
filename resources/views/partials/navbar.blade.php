@@ -8,13 +8,10 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="/">Home</a></li>
-          <li><a href="/article">Articles</a></li>
+          <li><a href="/articles">Articles</a></li>
           <li><a href="/contact">Contact</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
-
-      <a href="#about" class="get-started-btn scrollto">Get Started</a>
-
     </div>
   </header><!-- End Header -->
