@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
+use App\Models\FootHead;
 use Illuminate\Http\Request;
 
 class ResiController extends Controller
@@ -10,7 +12,8 @@ class ResiController extends Controller
         return view('welcome');
     }
     public function contact(){
-        return view('pages.contact');
+        $databaseContact = Contact:: all();
+        return view('pages.contact',compact('databaseContact'));
     }
     public function articles(){
         return view('pages.articles');

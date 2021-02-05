@@ -15,6 +15,10 @@ class CreateFootHeadsTable extends Migration
     {
         Schema::create('foot_heads', function (Blueprint $table) {
             $table->id();
+            $table-> string('titre',15);
+            $table->string('a1',10);
+            $table->string('a2',10);
+            $table->string('a3',10);
             $table->timestamps();
         });
     }
