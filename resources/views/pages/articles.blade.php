@@ -5,8 +5,25 @@
         <div class="container">
   
           <div class="row">
+
+            @foreach ($dbArticle as $article)
+
+              <div class="col-lg-4 mt-4 mt-lg-0">
+                  <h3>{{$article->titre}}</h3>
+                <div class="box">
+                  <span>{{$article->span}}</span>
+                  <h4>{{$article->h4}}</h4>
+                  <p>{{$article->p}}</p>
+                </div>
+              </div>
+                
+            @endforeach
+
+          
+
+
   
-            <div class="col-lg-4">
+            {{-- <div class="col-lg-4">
                 <h3>Titre1</h3>
               <div class="box">
                 <span>01</span>
@@ -61,7 +78,7 @@
                 <h4> Ad ad velit qui</h4>
                 <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
               </div>
-            </div>
+            </div> --}}
   
           </div>
   

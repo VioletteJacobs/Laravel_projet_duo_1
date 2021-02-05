@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use App\Models\Contact;
 use App\Models\FootHead;
 use Illuminate\Http\Request;
@@ -16,6 +17,7 @@ class ResiController extends Controller
         return view('pages.contact',compact('databaseContact'));
     }
     public function articles(){
-        return view('pages.articles');
+        $dbArticle= Article::all();
+        return view('pages.articles',compact('dbArticle'));
     }
 }
