@@ -16,23 +16,23 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="info-box">
-                        <i class="bx bx-map"></i>
-                        <h3>Our Address</h3>
-                        <p>A108 Adam Street, New York, NY 535022</p>
+                        <i class="{{$databaseContact[0] -> iconmap}}"></i>
+                        <h3>{{$databaseContact[0] -> h3adresse}}</h3>
+                        <p>{{$databaseContact[0] -> paraadresse}}</p>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="info-box mt-4">
-                        <i class="bx bx-envelope"></i>
-                        <h3>Email Us</h3>
-                        <p>info@example.com<br>contact@example.com</p>
+                        <i class="{{$databaseContact[0] -> iconenvelope}}"></i>
+                        <h3>{{$databaseContact[0] -> h3mail}}</h3>
+                        <p>{{$databaseContact[0] -> paramail}}<br>{{$databaseContact[0] -> paramailcontact}}</p>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="info-box mt-4">
-                        <i class="bx bx-phone-call"></i>
-                        <h3>Call Us</h3>
-                        <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                        <i class="{{$databaseContact[0] -> iconphone}}"></i>
+                        <h3>{{$databaseContact[0] -> h3call}}</h3>
+                        <p>{{$databaseContact[0] -> paracall}}<br>{{$databaseContact[0] -> paramail2}}</p>
                       </div>
                     </div>
                   </div>
@@ -60,11 +60,11 @@
                       <div class="validate"></div>
                     </div>
                     <div class="mb-3">
-                      <div class="loading">Loading</div>
+                      <div class="loading">{{$databaseContact[0] -> loading}}</div>
                       <div class="error-message"></div>
-                      <div class="sent-message">Your message has been sent. Thank you!</div>
+                      <div class="sent-message">{{$databaseContact[0] -> parasent}}</div>
                     </div>
-                    <div class="text-center"><button type="submit">Send Message</button></div>
+                    <div class="text-center"><button type="submit">{{$databaseContact[0] -> button}}</button></div>
                   </form>
                 </div>
       

@@ -17,6 +17,20 @@ class CreateContactsTable extends Migration
             $table->id();
             $table->string("h2", 15);
             $table->string("para1",50);
+            $table->string("h3adresse",20);
+            $table->string("paraadresse",50);
+            $table->string("h3mail",20);
+            $table->string("paramail",50);
+            $table->string("paramailcontact",50);
+            $table->string("h3call",20);
+            $table->integer("paracall1");
+            $table->integer("paramail2");
+            $table->string("loading",20);
+            $table->string("parasent",20);
+            $table->string("button",20);
+            $table->string("iconmap", 20);
+            $table->string("iconenvelope", 20);
+            $table->string("iconphone", 20);
             $table->timestamps();
         });
     }
