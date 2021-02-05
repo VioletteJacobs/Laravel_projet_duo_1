@@ -18,7 +18,7 @@
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img">
-          <img src="{{asset('img/hero-img.png')}}'" class="img-fluid" alt="">
+          <img src="{{asset('img/hero-img.png')}}" class="img-fluid" alt="">
         </div>
       </div>
     </div>
