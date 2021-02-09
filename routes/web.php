@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BackofficeController;
 use App\Http\Controllers\ResiController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [ResiController::class, 'index']);
 Route::get('/contact', [ResiController::class, 'contact']);
 Route::get('/articles', [ResiController::class, 'articles']);
+
+
+Route::get('/backoffice', [BackofficeController::class, 'indexBack']);
+
+
+Route::post('store_li', [BackofficeController::class,'liStore']);
+

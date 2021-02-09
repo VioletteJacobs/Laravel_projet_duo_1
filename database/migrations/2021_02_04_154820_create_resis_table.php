@@ -25,7 +25,7 @@ class CreateResisTable extends Migration
             $table->string('img1',50);
             $table->string('h2',50);
             $table->string('h3',200);
-            $table->string('img2',50);
+            $table->string('img2',10000);
             $table->string('p1',300);
             $table->string('dblCheck',50);
             $table->string('li4',200);

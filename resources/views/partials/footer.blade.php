@@ -1,4 +1,4 @@
-<footer id="footer">
+{{-- <footer id="footer">
     <div class="container d-md-flex py-4">
         <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
@@ -20,4 +20,4 @@
             <a href="#" class="linkedin"><i class="{{$dbFooter[0]-> icon5}}"></i></a>
         </div>
     </div>
-</footer><!-- End Footer -->
+</footer><!-- End Footer --> --}}
