@@ -7,10 +7,9 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="/">{{$dbnavfoot[0]-> a1}}</a></li>
-          <li><a href="/articles">{{$dbnavfoot[0]-> a2}}</a></li>
-          <li><a href="/contact">{{$dbnavfoot[0]-> a3}}</a></li>
-
+          @foreach ($dbLinav as $item)
+          <li><a href="/">{{$item -> contenu}}</a></li>
+          @endforeach
         </ul>
       </nav><!-- .nav-menu -->
     </div>

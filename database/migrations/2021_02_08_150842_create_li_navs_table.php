@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateArticlesTable extends Migration
+class CreateLiNavsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateArticlesTable extends Migration
      */
     public function up()
     {
-        Schema::create('articles', function (Blueprint $table) {
+        Schema::create('li_navs', function (Blueprint $table) {
             $table->id();
-            $table->string('titre',400);
-            $table->string('span',30);
-            $table->string('h4',400);
-            $table->string('p',1000);
+            $table->string("contenu", 160);
+            $table->string("href", 800);
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateArticlesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('articles');
+        Schema::dropIfExists('li_navs');
     }
 }
