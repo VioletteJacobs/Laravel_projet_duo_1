@@ -18,21 +18,37 @@
                       <div class="info-box">
                         <i class="{{$databaseContact[0] -> iconmap}}"></i>
                         <h3>{{$databaseContact[0] -> h3adresse}}</h3>
-                        <p>{{$databaseContact[0] -> paraadresse}}</p>
+                        @foreach ($dbAdress as $adress)
+                        <p>{{$adress->adresse1}}</p>
+
+
+                            
+                        @endforeach
+                        {{-- <p>{{$databaseContact[0] -> paraadresse}}</p> --}}
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="info-box mt-4">
                         <i class="{{$databaseContact[0] -> iconenvelope}}"></i>
                         <h3>{{$databaseContact[0] -> h3mail}}</h3>
-                        <p>{{$databaseContact[0] -> paramail}}<br>{{$databaseContact[0] -> paramailcontact}}</p>
+                        @foreach ($dbMail as $mail)
+                        <p>{{$mail->mail1}}<br>{{$mail->mail2}}</p>
+                            
+                        @endforeach
+
+                        {{-- <p>{{$databaseContact[0] -> paramail}}<br>{{$databaseContact[0] -> paramailcontact}}</p> --}}
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="info-box mt-4">
                         <i class="{{$databaseContact[0] -> iconphone}}"></i>
-                        <h3>{{$databaseContact[0] -> h3call}}</h3>
-                        <p>{{$databaseContact[0] -> paracall}}<br>{{$databaseContact[0] -> paramail2}}</p>
+                        <h3>{{$databaseContact[0] -> h3phone}}</h3>
+                        @foreach ($dbPhone as $phone)
+                        <p>{{$phone->phone1}}<br>{{$phone->phone2}}</p>
+
+                            
+                        @endforeach
+                        {{-- <p>{{$databaseContact[0] -> paracall}}<br>{{$databaseContact[0] -> paramail2}}</p> --}}
                       </div>
                     </div>
                   </div>
@@ -64,7 +80,7 @@
                       <div class="error-message"></div>
                       <div class="sent-message">{{$databaseContact[0] -> parasent}}</div>
                     </div>
-                    <div class="text-center"><button type="submit">{{$databaseContact[0] -> button}}</button></div>
+                    <div class="text-center"><button type="submit">Send</button></div>
                   </form>
                 </div>
       
