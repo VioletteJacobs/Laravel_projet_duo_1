@@ -8,9 +8,12 @@
         <div class="col-lg-6 pt-2 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
           <h1>{{$dbHome[0]->h1}}</h1>
           <ul>
-            <li><i class="{{$dbHome[0]->check}}"></i> {{$dbHome[0]->li1}}</li>
-            <li><i class="{{$dbHome[0]->check}}"></i> {{$dbHome[0]->li2}}</li>
-            <li><i class="{{$dbHome[0]->check}}"></i> {{$dbHome[0]->li3}}</li>
+            
+            @foreach ($dbLis as $li)
+            <li><i class="{{$dbHome[0]->check}}"></i> {{$li->liContent}}</li>
+
+              
+          @endforeach
           </ul>
           <div class="mt-3">
             <a href="#about" class="btn-get-started scrollto">{{$dbHome[0]->btn1}}</a>
@@ -43,9 +46,12 @@
               {{$dbHome[0]->p1}}
             </p>
             <ul>
-              <li><i class="{{$dbHome[0]->dblCheck}}"></i> {{$dbHome[0]->li4}}</li>
-              <li><i class="{{$dbHome[0]->dblCheck}}"></i> {{$dbHome[0]->li5}}</li>
-              <li><i class="{{$dbHome[0]->dblCheck}}"></i> {{$dbHome[0]->li6}}</li>
+              @foreach ($dbLis2 as $li)
+                <li><i class="{{$dbHome[0]->dblCheck}}"></i> {{$li->liContent}}</li>
+
+                  
+              @endforeach
+              
             </ul>
             <p class="font-italic">
               {{$dbHome[0]->p2}}

@@ -15,6 +15,16 @@ class CreateContactsTable extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
+            $table->string("h2", 50);
+            $table->string("para1",1000);
+            $table->string("iconmap",500);
+            $table->string("h3adresse",100);
+            $table->string("iconenvelope",500);
+            $table->string("h3mail",100);
+            $table->string("iconphone",500);
+            $table->string("h3phone",100);
+            $table-> string("loading",50);
+            $table-> string("parasent",500);
             $table->timestamps();
         });
     }
@@ -27,5 +37,6 @@ class CreateContactsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('contacts');
+        
     }
 }
