@@ -21,7 +21,15 @@ Route::get('/articles', [ResiController::class, 'articles']);
 
 
 Route::get('/backoffice', [BackofficeController::class, 'indexBack']);
+Route::get('/backarticle', [BackofficeController::class, 'indexBackArticle']);
+Route::get('/backcontact', [BackofficeController::class, 'indexBackContact']);
+Route::get('/show_article/{id}', [BackofficeController::class, 'show']);
+
 
 
 Route::post('store_li', [BackofficeController::class,'liStore']);
+Route::post('/store_article', [BackofficeController::class,'articleStore']);
+Route::post('/store_adress', [BackofficeController::class,'adressStore']);
+Route::post('/store_mail', [BackofficeController::class,'mailStore']);
+Route::post('/store_phone', [BackofficeController::class,'phoneStore']);
 
