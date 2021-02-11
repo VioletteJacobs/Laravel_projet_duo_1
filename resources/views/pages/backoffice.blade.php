@@ -18,7 +18,12 @@
       <th scope="row">{{$li->id}}</th>
 
       <td>{{$li->liContent}}</td>
-
+      <td>
+        <form action="/delete_li/{{$li->id}}" method="POST">
+          @csrf
+          <button class="btn btn-danger" type="submit">Delete</button>
+        </form>
+      </td>
     </tr>
 
         

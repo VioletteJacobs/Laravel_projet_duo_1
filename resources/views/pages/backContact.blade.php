@@ -15,7 +15,13 @@
       <th scope="row">{{$adress->id}}</th>
 
       <td>{{$adress->adresse1}}</td>
-
+      <td>
+        <form action="/delete_adress/{{$adress->id}}" method="POST">
+          @csrf
+          <button class="btn btn-danger" type="submit">Delete</button>
+        </form>
+      </td>
+ 
 
     </tr>
 
@@ -38,7 +44,12 @@
       <th scope="row">{{$mail->id}}</th>
 
       <td>{{$mail->mail1}}</td>
-
+      <td>
+        <form action="/delete_mail/{{$mail->id}}" method="POST">
+          @csrf
+          <button class="btn btn-danger" type="submit">Delete</button>
+        </form>
+      </td>
 
     </tr>
 
@@ -60,6 +71,12 @@
       <th scope="row">{{$phone->id}}</th>
 
       <td>{{$phone->phone1}}</td>
+      <td>
+        <form action="/delete_phone/{{$phone->id}}" method="POST">
+          @csrf
+          <button class="btn btn-danger" type="submit">Delete</button>
+        </form>
+      </td>
 
 
     </tr>

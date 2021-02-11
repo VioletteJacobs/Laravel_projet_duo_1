@@ -32,4 +32,8 @@ Route::post('/store_article', [BackofficeController::class,'articleStore']);
 Route::post('/store_adress', [BackofficeController::class,'adressStore']);
 Route::post('/store_mail', [BackofficeController::class,'mailStore']);
 Route::post('/store_phone', [BackofficeController::class,'phoneStore']);
-
+Route::post('/delete_articles/{id}', [BackofficeController::class,'destroy']);
+Route::post('/delete_li/{id}', [BackofficeController::class,'destroyLi']);
+Route::post('/delete_adress/{id}', [BackofficeController::class,'destroyadress']);
+Route::post('/delete_mail/{id}', [BackofficeController::class,'destroymail']);
+Route::post('/delete_phone/{id}', [BackofficeController::class,'destroyphone']);

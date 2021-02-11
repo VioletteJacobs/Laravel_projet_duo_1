@@ -39,6 +39,11 @@ class BackofficeController extends Controller
         return redirect('/backoffice');
 
     }
+    public function destroyLi($id){
+        $destroy= Li::find($id);
+        $destroy->delete();
+        return redirect()-> back();
+    }
 
     public function articleStore(Request $request){
         $newEntry= new Article;
@@ -51,7 +56,14 @@ class BackofficeController extends Controller
 
         return redirect('/backarticle');
 
+    }    
+    
+    public function destroy($id){
+        $destroy= Article::find($id);
+        $destroy->delete();
+        return redirect()-> back();
     }
+    
     public function adressStore(Request $request){
         $newEntry= new Adress;
         $newEntry->adresse1=$request->adresse1;
@@ -60,6 +72,11 @@ class BackofficeController extends Controller
 
         return redirect('/backcontact');
 
+    }
+    public function destroyadress($id){
+        $destroy= Adress::find($id);
+        $destroy->delete();
+        return redirect()-> back();
     }
     public function mailStore(Request $request){
         $newEntry= new Mail();
@@ -70,6 +87,11 @@ class BackofficeController extends Controller
         return redirect('/backcontact');
 
     }
+    public function destroymail($id){
+        $destroy= Mail::find($id);
+        $destroy->delete();
+        return redirect()-> back();
+    }
     public function phoneStore(Request $request){
         $newEntry= new Phone();
         $newEntry->phone1=$request->phone1;
@@ -78,6 +100,11 @@ class BackofficeController extends Controller
 
         return redirect('/backcontact');
 
+    }
+    public function destroyphone($id){
+        $destroy= Phone::find($id);
+        $destroy->delete();
+        return redirect()-> back();
     }
     // show
     public function show($id){

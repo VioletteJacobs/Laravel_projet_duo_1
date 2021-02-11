@@ -23,7 +23,12 @@
       <td>{{$article->h4}}</td>
       <td>{{$article->p}}</td>
       <td><a href="/show_article/{{$article->id}}" class="btn btn-success">Show</a></td>
-
+      <td>
+        <form action="/delete_articles/{{$article->id}}" method="POST">
+          @csrf
+          <button class="btn btn-danger" type="submit">Delete</button>
+        </form>
+      </td>
     </tr>
 
         
