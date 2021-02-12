@@ -44,6 +44,16 @@ class BackofficeController extends Controller
         $destroy->delete();
         return redirect()-> back();
     }
+    public function editLi($id){
+        $edit= Li::find($id);
+        return view("pages.editLi", compact('edit'));
+    }
+    public function updateLi(Request $request, $id){
+        $update = Li::find($id);
+        $update->liContent=$request->liContent;
+        $update->save();
+        return redirect('backoffice');
+    }
 
     public function articleStore(Request $request){
         $newEntry= new Article;
@@ -110,6 +120,20 @@ class BackofficeController extends Controller
     public function show($id){
         $show= Article::find($id);
         return view("pages.show", compact('show'));
+    }
+    // edit
+    public function edit($id){
+        $edit= Article::find($id);
+        return view("pages.edit", compact('edit'));
+    }
+    public function update(Request $request, $id){
+        $update = Article::find($id);
+        $update->titre=$request->titre;
+        $update->span=$request->span;
+        $update->h4=$request->h4;
+        $update->p=$request->p;
+        $update->save();
+        return redirect('/backarticle');
     }
 
     

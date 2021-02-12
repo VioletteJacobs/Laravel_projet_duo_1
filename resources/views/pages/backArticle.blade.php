@@ -28,6 +28,7 @@
           @csrf
           <button class="btn btn-danger" type="submit">Delete</button>
         </form>
+        <td><a href="/edit_article/{{$article->id}}" class="btn btn-primary">Edit</a></td>
       </td>
     </tr>
 

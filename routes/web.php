@@ -24,7 +24,8 @@ Route::get('/backoffice', [BackofficeController::class, 'indexBack']);
 Route::get('/backarticle', [BackofficeController::class, 'indexBackArticle']);
 Route::get('/backcontact', [BackofficeController::class, 'indexBackContact']);
 Route::get('/show_article/{id}', [BackofficeController::class, 'show']);
-
+Route::get('/edit_article/{id}', [BackofficeController::class, 'edit']);
+Route::get('/edit_li/{id}', [BackofficeController::class, 'editLi']);
 
 
 Route::post('store_li', [BackofficeController::class,'liStore']);
@@ -37,3 +38,5 @@ Route::post('/delete_li/{id}', [BackofficeController::class,'destroyLi']);
 Route::post('/delete_adress/{id}', [BackofficeController::class,'destroyadress']);
 Route::post('/delete_mail/{id}', [BackofficeController::class,'destroymail']);
 Route::post('/delete_phone/{id}', [BackofficeController::class,'destroyphone']);
+Route::post('/update_article/{id}', [BackofficeController::class,'update']);
+Route::post('/update_li/{id}', [BackofficeController::class,'updateLi']);

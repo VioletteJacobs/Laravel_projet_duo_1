@@ -24,6 +24,7 @@
           <button class="btn btn-danger" type="submit">Delete</button>
         </form>
       </td>
+      <td><a href="/edit_li/{{$li->id}}" class="btn btn-primary">Edit</a></td>
     </tr>
 
         
