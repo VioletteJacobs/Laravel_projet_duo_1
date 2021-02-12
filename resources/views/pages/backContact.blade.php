@@ -20,6 +20,7 @@
           @csrf
           <button class="btn btn-danger" type="submit">Delete</button>
         </form>
+        <td><a href="/edit_adress/{{$adress->id}}" class="btn btn-primary">Edit</a></td>
       </td>
  
 
@@ -49,6 +50,7 @@
           @csrf
           <button class="btn btn-danger" type="submit">Delete</button>
         </form>
+        <td><a href="/edit_mail/{{$mail->id}}" class="btn btn-primary">Edit</a></td>
       </td>
 
     </tr>
@@ -76,6 +78,7 @@
           @csrf
           <button class="btn btn-danger" type="submit">Delete</button>
         </form>
+        <td><a href="/edit_phone/{{$phone->id}}" class="btn btn-primary">Edit</a></td>
       </td>
 
 
@@ -100,7 +103,7 @@
     <div class="form-group text-center">
 
       <label for="exampleFormControlTextarea1">New Adress</label>
-      <input type="text" name="adresse1"></input>
+      <input type="text" name="adresse1">
 
       <button type="submit">Enter</button>
 
@@ -125,7 +128,7 @@
     <div class="form-group text-center">
 
       <label for="exampleFormControlTextarea1">New mail</label>
-      <input type="text" name="mail1"></input>
+      <input type="text" name="mail1">
       <button type="submit">Enter</button>
 
 
@@ -148,7 +151,7 @@
     <div class="form-group text-center">
 
       <label for="exampleFormControlTextarea1">New phone</label>
-      <input type="text" name="phone1"></input>
+      <input type="text" name="phone1">
       <button type="submit">Enter</button>
 
 

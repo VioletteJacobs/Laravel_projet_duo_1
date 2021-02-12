@@ -30,6 +30,38 @@ class BackofficeController extends Controller
         return view('pages.backContact',compact('dbAdress','dbMail','dbPhone'));
     }
 
+        // edit
+        public function editadress($id){
+            $edit= Adress::find($id);
+            return view("pages.editAdress", compact('edit'));
+        }
+        public function updateadress(Request $request, $id){
+            $update = Adress::find($id);
+            $update->adresse1=$request->adresse1;
+            $update->save();
+            return redirect('/backcontact');
+        }
+        public function editmail($id){
+            $edit= Mail::find($id);
+            return view("pages.editMail", compact('edit'));
+        }
+        public function updatemail(Request $request, $id){
+            $update = Mail::find($id);
+            $update->mail1=$request->mail1;
+            $update->save();
+            return redirect('/backcontact');
+        }
+        public function editphone($id){
+            $edit= Phone::find($id);
+            return view("pages.editPhone", compact('edit'));
+        }
+        public function updatephone(Request $request, $id){
+            $update = Phone::find($id);
+            $update->phone1=$request->phone1;
+            $update->save();
+            return redirect('/backcontact');
+        }
+
     public function liStore(Request $request){
         $newEntry= new Li;
         $newEntry->liContent=$request->liContent;
